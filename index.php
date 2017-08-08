@@ -1,5 +1,5 @@
 <?php
-$user = "user2";
+/*$user = "user2";
 $dB = "user2";
 $host = "localhost";
 $password = "tuser2";
@@ -8,7 +8,7 @@ if(mysql_select_db($dB))
 {
   echo "Connect<br>";
 }
-else die ("Cant connect to db");
+else die ("Cant connect to db");*/
 /*$b = rand(1111, 9999);
 $c = date("d.m.Y");*/
 /*function generateName($length = 100){
@@ -39,7 +39,29 @@ for($i = 1;$i<=500000;$i++)
 }
 echo "Added";
 */
+function generateDescription($length){
+$chars = 'abdefhiknrstyzABDEFGHKNQRSTYZ23456789';
+$numChars = strlen($chars);
+$string = '';
+for ($i = 0; $i < $length; $i++) {
+$string .= substr($chars, rand(1, $numChars) - 1, 1);
+}
+return $string;
+}
 
+ $host= "localhost";
+ $user = "user2";
+ $pass = "user2a";
+ $db = "user2";
+ $connection = pg_connect("host=$this->host dbname=$this->db user=$this->user password=$this->pass");
+ if ($connection)
+ {
+      echo "Connect Postgre";
+ }else
+ {
+      echo "Not connect";
+ }       
+    
 
 
 
