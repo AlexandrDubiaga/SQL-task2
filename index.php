@@ -53,7 +53,7 @@ return $string;
  $user = "user2";
  $pass = "user2a";
  $db = "user2";
- $connection = pg_connect("host=$this->host dbname=$this->db user=$this->user password=$this->pass");
+ $connection = pg_connect("host=$host dbname=$db user=$user password=$pass");
  if ($connection)
  {
       echo "Connect Postgre";
