@@ -11,7 +11,7 @@ if(mysql_select_db($dB))
 else die ("Cant connect to db");
 /*$b = rand(1111, 9999);
 $c = date("d.m.Y");*/
-function generatePassword($length = 100){
+function generateName($length = 100){
 $chars = 'abdefhiknrstyzABDEFGHKNQRSTYZ23456789';
 $numChars = strlen($chars);
 $string = '';
@@ -20,12 +20,24 @@ $string .= substr($chars, rand(1, $numChars) - 1, 1);
 }
 return $string;
 }
+function generateDescription($length = 300){
+$chars = 'abdefhiknrstyzABDEFGHKNQRSTYZ23456789';
+$numChars = strlen($chars);
+$string = '';
+for ($i = 0; $i < $length; $i++) {
+$string .= substr($chars, rand(1, $numChars) - 1, 1);
+}
+return $string;
+}
+$name = generateName(100);
+$desc = generateDescription(300);
 
-echo "Пароль из 8 символов: " . generatePassword(100) . "n";
+for($i = 0;$i<10;$i++)
+{
+  $query = mysql_query("INSERT INTO task2 VALUES ('$i','$name','$desc')");
+}
+echo "Added";
 
-/*
-$query = mysql_query("INSERT INTO table (a,b,c) VALUES ($a,$b,$c)");
-}*/
 
 
 
