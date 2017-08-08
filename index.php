@@ -11,7 +11,7 @@ if(mysql_select_db($dB))
 else die ("Cant connect to db");
 /*$b = rand(1111, 9999);
 $c = date("d.m.Y");*/
-function generateName($length = 100){
+/*function generateName($length = 100){
 $chars = 'abdefhiknrstyzABDEFGHKNQRSTYZ23456789';
 $numChars = strlen($chars);
 $string = '';
@@ -38,7 +38,7 @@ for($i = 1;$i<=500000;$i++)
   $query = mysql_query("INSERT INTO task2 VALUES ('$i','$name','$desc')");
 }
 echo "Added";
-
+*/
 
 
 
