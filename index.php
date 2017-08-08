@@ -77,7 +77,7 @@ for($i = 1;$i<=3;$i++)
 {
   $name = generateName(100);
   $desc = generateDescription(300);
-  $query = pg_query("INSERT INTO `task2` VALUES ('$i','$name','$desc')");
+  $query = pg_query("INSERT INTO task2 VALUES ('$i','$name','$desc')");
 }
 echo "Added";  
 
