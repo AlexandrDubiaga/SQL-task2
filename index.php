@@ -30,7 +30,7 @@ $string .= substr($chars, rand(1, $numChars) - 1, 1);
 return $string;
 }
 
-
+set_time_limit(400);
 for($i = 1;$i<=500000;$i++)
 {
   $name = generateName(100);
