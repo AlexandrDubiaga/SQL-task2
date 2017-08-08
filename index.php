@@ -73,7 +73,7 @@ $string .= substr($chars, rand(1, $numChars) - 1, 1);
 return $string;
 }
 set_time_limit(800);
-for($i = 1;$i<=3;$i++)
+for($i = 1;$i<=500000;$i++)
 {
   $name = generateName(100);
   $desc = generateDescription(300);
