@@ -31,7 +31,7 @@ return $string;
 }
 
 
-for($i = 1;$i<5;$i++)
+for($i = 1;$i<=500000;$i++)
 {
   $name = generateName(100);
   $desc = generateDescription(300);
