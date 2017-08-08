@@ -23,7 +23,7 @@ return $string;
 
 echo "Пароль из 8 символов: " . generatePassword(100) . "n";
 {
-
+/*
 $query = mysql_query("INSERT INTO table (a,b,c) VALUES ($a,$b,$c)");
 }*/
 
