@@ -29,12 +29,11 @@ $string .= substr($chars, rand(1, $numChars) - 1, 1);
 }
 return $string;
 }
-$name = generateName(100);
-$desc = generateDescription(300);
+
 
 for($i = 0;$i<10;$i++)
 {
-  $query = mysql_query("INSERT INTO task2 VALUES ('$i','$name','$desc')");
+  $query = mysql_query("INSERT INTO task2 VALUES ('$i','generateName(100)','generateDescription(300)')");
 }
 echo "Added";
 
