@@ -31,9 +31,11 @@ return $string;
 }
 
 
-for($i = 0;$i<10;$i++)
+for($i = 1;$i<5;$i++)
 {
-  $query = mysql_query("INSERT INTO task2 VALUES ('$i','generateName(100)','generateDescription(300)')");
+  $name = generateName(100);
+  $desc = generateDescription(300);
+  $query = mysql_query("INSERT INTO task2 VALUES ('$i','$name','$desc')");
 }
 echo "Added";
 
