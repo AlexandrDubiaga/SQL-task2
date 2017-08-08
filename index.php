@@ -39,15 +39,6 @@ for($i = 1;$i<=500000;$i++)
 }
 echo "Added";
 */
-function generateDescription($length){
-$chars = 'abdefhiknrstyzABDEFGHKNQRSTYZ23456789';
-$numChars = strlen($chars);
-$string = '';
-for ($i = 0; $i < $length; $i++) {
-$string .= substr($chars, rand(1, $numChars) - 1, 1);
-}
-return $string;
-}
 
  $host= "localhost";
  $user = "user2";
@@ -61,7 +52,25 @@ return $string;
  {
       echo "Not connect";
  }       
-    
+function generateDescription($length)
+{
+  $chars = 'abdefhiknrstyzABDEFGHKNQRSTYZ23456789';
+  $numChars = strlen($chars);
+  $string = '';
+  for ($i = 0; $i < $length; $i++)
+  {
+    $string .= substr($chars, rand(1, $numChars) - 1, 1);
+  }
+return $string;
+}
+set_time_limit(800);
+for($i = 1;$i<=3;$i++)
+{
+  $name = generateName(100);
+  $desc = generateDescription(300);
+  $query = pg_query("INSERT INTO `task2` VALUES ('$i','$name','$desc')");
+}
+echo "Added";  
 
 
 
